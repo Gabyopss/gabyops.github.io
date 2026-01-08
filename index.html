@@ -1,71 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Renda Extra pela Internet</title>
+<meta charset="UTF-8">
+<title>Renda Extra Online</title>
 
-    <!-- Responsivo para celular -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: #ffffff;
-            text-align: center;
-            padding: 40px 20px;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #fff;
+}
 
-        h1 {
-            color: #22c55e;
-        }
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px 20px;
+    text-align: center;
+}
 
-        .container {
-            max-width: 500px;
-            margin: auto;
-        }
+h1 {
+    color: #22c55e;
+    font-size: 28px;
+}
 
-        .botao {
-            display: block;
-            background: #22c55e;
-            color: #000;
-            padding: 15px;
-            margin: 20px 0;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-        }
+.sub {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
 
-        .botao:hover {
-            background: #16a34a;
-        }
+.video {
+    margin: 20px 0;
+}
 
-        .aviso {
-            font-size: 12px;
-            color: #cbd5f5;
-            margin-top: 30px;
-        }
-    </style>
+iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 10px;
+}
+
+.timer {
+    background: #020617;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+.timer span {
+    color: #22c55e;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.botao {
+    display: block;
+    background: #22c55e;
+    color: #000;
+    padding: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.botao:hover {
+    background: #16a34a;
+}
+
+.aviso {
+    font-size: 12px;
+    color: #cbd5f5;
+    margin-top: 30px;
+}
+</style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Aprenda a ganhar dinheiro pela internet</h1>
+<div class="container">
 
-        <p>
-            Descubra um método simples para criar renda extra online,
-            mesmo começando do zero e usando apenas o celular.
-        </p>
+<h1>Aprenda a ganhar dinheiro com a internet</h1>
+<p class="sub">
+Método usado por iniciantes para criar renda extra online,
+mesmo começando do zero.
+</p>
 
-        <!-- COLE SEU LINK DA KIWIFY AQUI -->
-        <a class="botao" href="https://SEULINKDAKIWIFY" target="_blank">
-            Quero aprender agora
-        </a>
+<!-- VIDEO DO CRIADOR -->
+<div class="video">
+<iframe 
+src="https://www.youtube.com/embed/SEUVIDEO"
+title="Vídeo explicativo"
+allowfullscreen>
+</iframe>
+</div>
 
-        <p class="aviso">
-            ⚠️ Resultados variam de pessoa para pessoa.  
-            Este site não garante ganhos financeiros.
-        </p>
-    </div>
+<!-- CONTADOR -->
+<div class="timer">
+⏰ Oferta disponível por apenas:<br>
+<span id="contador">15:00</span>
+</div>
+
+<!-- BOTÃO -->
+<a href="https://SEULINKDAKIWIFY" class="botao" target="_blank">
+Quero aprender agora
+</a>
+
+<p class="aviso">
+⚠️ Resultados variam de pessoa para pessoa.
+Este site não garante ganhos financeiros.
+</p>
+
+</div>
+
+<script>
+// CONTADOR DE 15 MINUTOS
+let tempo = 15 * 60;
+
+setInterval(() => {
+    let minutos = Math.floor(tempo / 60);
+    let segundos = tempo % 60;
+
+    document.getElementById("contador").innerHTML =
+        `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
+
+    if (tempo > 0) tempo--;
+}, 1000);
+</script>
+
 </body>
 </html>
